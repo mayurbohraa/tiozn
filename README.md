@@ -77,3 +77,8 @@ Publish the repository root as a static directory. The checked-in files are the 
 ```
 
 The images directory also contains the website’s logos, icons, illustrations, project thumbnails, and portraits. The responsive stylesheet contains readable source CSS despite its filename.
+
+## My Contributions
+
+- Designed the user interface and developed the frontend.
+- Deployed the website on Vercel.
