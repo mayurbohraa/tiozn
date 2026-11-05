@@ -1,4 +1,4 @@
-<!-- Tizonn Website |  Version 1.0  |  Developed by Progshee Technologies -->
+<!-- Tizonn Website |  Version 1.0 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,7 @@
 
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"
+      content="width=device-width, initial-scale=1"
     />
 
     <meta
@@ -35,132 +35,26 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-
-    <!------- css files ------->
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
-      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
-      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <script
-      src="https://kit.fontawesome.com/4bd780e91b.js"
-      crossorigin="anonymous"
-    ></script>
-
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="./css/responsive.min.css" />
 
-    <style>
-      .scroller {
-        max-width: 1280px;
-        /* outline: 3px solid lime; */
-
-        .scroller__inner {
-          padding: 1rem 0;
-          display: flex;
-          gap: 4rem;
-          flex-wrap: wrap;
-
-          li img {
-            width: 281px;
-            height: 281px;
-            object-fit: cover;
-          }
-        }
-
-        &[data-animated="true"] {
-          /* border: 5px solid lime; */
-          overflow: hidden;
-          --webkit-mask: linear-gradient(
-            90deg,
-            transparent,
-            white 20%,
-            white 80%,
-            transparent
-          );
-          mask: linear-gradient(
-            90deg,
-            transparent,
-            white 20%,
-            white 80%,
-            transparent
-          );
-
-          & .scroller__inner {
-            flex-wrap: nowrap;
-            animation: scroll 40s forwards linear infinite;
-          }
-        }
-      }
-
-      @keyframes scroll {
-        to {
-          transform: translate(calc(-50% - 0.5rem));
-        }
-      }
-
-      .img-list {
-        list-style: none;
-        align-items: center;
-        justify-content: center;
-
-        & li {
-          min-width: 250px;
-        }
-      }
-    </style>
+    <script src="js/scripts.js" defer></script>
   </head>
 
   <body>
     <div id="whatsapp-redirect">
       <a
         href="https://wa.me/918826123751?text=Hello, I'm interested in learning about your services. Can you provide more details?"
-        target="_blank"
-        ><img src="./images/whatsapp.png" alt=""
+        target="_blank" rel="noopener noreferrer"
+        ><img src="./images/whatsapp.webp" alt="Chat with Tizon on WhatsApp" width="90" height="90"
       /></a>
     </div>
 
     <!------------ Navbar ------------>
     <header id="navbar">
-      <nav class="navbar-container" id="nav">
-        <a href="/" class="home-link">
-          <img
-            class="logo"
-            src="./images/logo.png
-                "
-            alt=""
-          />
+      <nav class="navbar-container" aria-label="Main navigation">
+        <a href="#logo-section" class="home-link">
+          <img class="logo" src="./images/logo.png" alt="Tizon home" width="215" height="63" />
         </a>
 
         <button
@@ -174,31 +68,31 @@
           <span class="icon-bar-2"></span>
           <span class="icon-bar"></span>
         </button>
-        <div id="navbar-menu" aria-labelledby="navbar-toggle">
+        <div id="navbar-menu">
           <ul class="navbar-links">
             <li class="navbar-item">
               <a class="navbar-link" href="#logo-section">Home</a>
             </li>
-            <li class="navbar-item">
-              <h1 class="vertical-line"></h1>
+            <li class="navbar-item navbar-divider" aria-hidden="true">
+              <span class="vertical-line"></span>
             </li>
             <li class="navbar-item">
               <a class="navbar-link" href="#about-us">About Us</a>
             </li>
-            <li class="navbar-item">
-              <h1 class="vertical-line"></h1>
+            <li class="navbar-item navbar-divider" aria-hidden="true">
+              <span class="vertical-line"></span>
             </li>
             <li class="navbar-item">
               <a class="navbar-link" href="#portfolio-section">Portfolio</a>
             </li>
-            <li class="navbar-item">
-              <h1 class="vertical-line"></h1>
+            <li class="navbar-item navbar-divider" aria-hidden="true">
+              <span class="vertical-line"></span>
             </li>
             <li class="navbar-item">
               <a class="navbar-link" href="#why-choose-agency">Why Choose Us</a>
             </li>
-            <li class="navbar-item">
-              <h1 class="vertical-line"></h1>
+            <li class="navbar-item navbar-divider" aria-hidden="true">
+              <span class="vertical-line"></span>
             </li>
             <li class="navbar-item">
               <a class="navbar-link" href="#contact-section">Contact Us</a>
@@ -208,509 +102,365 @@
       </nav>
     </header>
 
-    <!-- ------------- Sections ---------- -->
+    <main>
+      <section id="logo-section" tabindex="-1">
+        <h1 class="visually-hidden">Tizon Designing Services</h1>
+        <div id="logos" aria-hidden="true">
+          <img class="logo" src="./images/t.svg" alt="" />
+          <img class="logo" src="./images/i.svg" alt="" />
+          <img class="logo" src="./images/z.svg" alt="" />
+          <img class="logo" src="./images/o.svg" alt="" />
+          <img class="logo" src="./images/n.svg" alt="" />
+        </div>
 
-    <section id="logo-section">
-      <div id="logos">
-        <img class="logo" src="./images/t.svg" alt="" />
-        <img class="logo" src="./images/i.svg" alt="" />
-        <img class="logo" src="./images/z.svg" alt="" />
-        <img class="logo" src="./images/o.svg" alt="" />
-        <img class="logo" src="./images/n.svg" alt="" />
-      </div>
-
-      <div id="logo-text">
-        <p>
-          Entrust the Artistry to Our Expertise &dash; Elevate Your 3D
-          Animations, 2D Animations, Graphic Designing, and VFX/CGI with Our
-          Dedicated Team
-        </p>
-      </div>
-    </section>
-
-    <section id="products-section">
-      <div class="text-content">
-        <h1>We are a new digital product development agency</h1>
-        <p>
-          Elevate your digital presence with our agency's expertise in
-          innovative product development. From concept to delivery, we bring
-          ideas to life with precision and Flair.
-        </p>
-      </div>
-
-      <div class="boxes">
-        <div class="box">
-          <img src="./images/3d-animation.png" alt="NA" />
-          <h3>3D Animations</h3>
+        <div id="logo-text">
           <p>
-            We're the animation sorcerers who bring your wildest visions to
-            life. Our digital brushstrokes weave enchanting spells, conjuring
-            innovation and visual brilliance into your 3D animated creations.
+            Entrust the Artistry to Our Expertise &dash; Elevate Your 3D
+            Animations, 2D Animations, Graphic Designing, and VFX/CGI with Our
+            Dedicated Team
           </p>
         </div>
-        <div class="box">
-          <img src="./images/2D-animation.png" alt="NA" />
-          <h3>2D Animations</h3>
+      </section>
+
+      <section id="products-section">
+        <div class="text-content">
+          <h2>We are a new digital product development agency</h2>
           <p>
-            We create animation wonders that leave viewers in awe! Our 2D
-            animations are crafted with precision, delivering experiences so
-            captivating they'll make your
+            Elevate your digital presence with our agency's expertise in
+            innovative product development. From concept to delivery, we bring
+            ideas to life with precision and Flair.
           </p>
         </div>
-        <div class="box">
-          <img src="./images/Designing-and-editing.png" alt="NA" />
-          <h3>Designing & Editing</h3>
+
+        <div class="boxes">
+          <div class="box">
+            <img src="./images/3d-animation.webp" alt="" width="500" height="500" loading="lazy" decoding="async" />
+            <h3>3D Animations</h3>
+            <p>
+              We're the animation sorcerers who bring your wildest visions to
+              life. Our digital brushstrokes weave enchanting spells, conjuring
+              innovation and visual brilliance into your 3D animated creations.
+            </p>
+          </div>
+          <div class="box">
+            <img src="./images/2D-animation.webp" alt="" width="500" height="500" loading="lazy" decoding="async" />
+            <h3>2D Animations</h3>
+            <p>
+              Our 2D animations are crafted with precision
+              to bring stories to life.
+            </p>
+          </div>
+          <div class="box">
+            <img src="./images/Designing-and-editing.webp" alt="" width="500" height="500" loading="lazy" decoding="async" />
+            <h3>Designing & Editing</h3>
+            <p>
+              ensuring a seamless blend of innovative design and compelling video
+              editing for an impactful visual experience.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio-section" tabindex="-1">
+        <div class="text-content">
+          <h2>See Our Featured Projects</h2>
           <p>
-            ensuring a seamless blend of innovative design and compelling video
-            editing for an impactful visual experience.
+            Explore featured work in 3D animation, 2D animation, graphic
+            design, and video editing.
           </p>
         </div>
-      </div>
-    </section>
 
-    <section id="portfolio-section">
-      <div class="text-content">
-        <h1>See Our Featured Projects</h1>
-        <p>
-          Indulge in our portfolio featuring mind-blowing 3D animations,
-          captivating 2D masterpieces, graphic design brilliance, and
-          cutting-edge VFX/CGI works. Our creations are a visual
-          symphony-explosively awesome , leaving a lasting
-          &OpenCurlyQuote;Wow&excl;&CloseCurlyQuote;
-        </p>
-      </div>
+        <nav class="portfolio-nav" aria-label="Portfolio categories">
+          <a href="#meta-3d" aria-current="true">3D Animation</a>
+          <a href="#shoeverse">2D Animation</a>
+          <a href="#tizon-design">Designing / Editing</a>
+        </nav>
 
-      <nav id="portfolio-nav">
-        <ul id="slider-nav">
-          <li class="links">3D Animation</li>
-          <li class="navbar-item">
-            <h1 class="vertical-line"></h1>
-          </li>
-          <li class="links">2D Animation</li>
-          <li class="navbar-item">
-            <h1 class="vertical-line"></h1>
-          </li>
-          <li class="links">Designing&#47;Editing</li>
-          <li class="navbar-item">
-            <h1 class="vertical-line"></h1>
-          </li>
-          <li class="links">VFX&#47;CGI</li>
-        </ul>
-        <span id="slider-span"></span>
-      </nav>
-
-      <di class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./images/Meta-3D.png" alt="" />
-            <div id="detail1" class="details">
-              <h2>Meta 3D</h2>
+        <div class="portfolio-carousel" aria-label="Featured projects" role="region" tabindex="0">
+          <article class="portfolio-card" id="meta-3d" tabindex="-1">
+            <img src="./images/Meta-3D.webp" alt="" width="960" height="424" loading="lazy" decoding="async" />
+            <div class="portfolio-details">
+              <h3>Meta 3D</h3>
               <p>
                 The Meta 3D project represents an innovative venture at the
                 intersection of technology and immersive experiences.
               </p>
-              <button class="video-btn">
-                <a
-                  href="https://youtu.be/uvkNRfrrvbk"
-                  target="_blank"
-                  id="headerVideoLink"
-                  class="btn popup-modal"
-                  >Watch Video</a
-                >
-              </button>
+              <a class="video-btn" href="https://youtu.be/uvkNRfrrvbk" target="_blank" rel="noopener noreferrer" aria-label="Watch Meta 3D video">
+                Watch Video
+              </a>
             </div>
-          </div>
+          </article>
 
-          <div class="swiper-slide">
-            <img src="./images/shoeverse.png" alt="" />
-            <div id="detail2" class="details">
-              <h2>Shoeverse final</h2>
+          <article class="portfolio-card" id="shoeverse" tabindex="-1">
+            <img src="./images/shoeverse.webp" alt="" width="960" height="438" loading="lazy" decoding="async" />
+            <div class="portfolio-details">
+              <h3>Shoeverse final</h3>
               <p>
                 Shoeverse: A groundbreaking fusion of footwear and technology,
                 redefining fashion and functionality.
               </p>
-              <button class="video-btn">
-                <a
-                  href="https://youtu.be/BwYL6NDv8kk"
-                  target="_blank"
-                  id="headerVideoLink"
-                  class="btn popup-modal"
-                  >Watch Video</a
-                >
-              </button>
+              <a class="video-btn" href="https://youtu.be/BwYL6NDv8kk" target="_blank" rel="noopener noreferrer" aria-label="Watch Shoeverse final video">
+                Watch Video
+              </a>
             </div>
-          </div>
+          </article>
 
-          <div class="swiper-slide">
-            <img src="./images/tizon design services.png" alt="" />
-            <div id="detail3" class="details">
-              <h2>Tizon designing services</h2>
+          <article class="portfolio-card" id="tizon-design" tabindex="-1">
+            <img src="./images/tizon design services.webp" alt="" width="960" height="431" loading="lazy" decoding="async" />
+            <div class="portfolio-details">
+              <h3>Tizon designing services</h3>
               <p>
                 Tizonn Designing Services: Elevating brands through strategic,
                 creative solutions.
               </p>
-              <button class="video-btn">
-                <a
-                  href="https://youtu.be/QxVC49lGblM"
-                  target="_blank"
-                  id="headerVideoLink"
-                  class="btn popup-modal"
-                  >Watch Video</a
-                >
-              </button>
+              <a class="video-btn" href="https://youtu.be/QxVC49lGblM" target="_blank" rel="noopener noreferrer" aria-label="Watch Tizon designing services video">
+                Watch Video
+              </a>
             </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img src="./images/Meta-3D.png" alt="" />
-            <div id="detail3" class="details">
-              <h2>Meta 3D</h2>
-              <p>
-                The Meta 3D project represents an innovative venture at the
-                intersection of technology and immersive experiences.
-              </p>
-              <button class="video-btn">
-                <a
-                  href="https://youtu.be/uvkNRfrrvbk"
-                  target="_blank"
-                  id="headerVideoLink"
-                  class="btn popup-modal"
-                  >Watch Video</a
-                >
-              </button>
-            </div>
-          </div>
+          </article>
         </div>
-      </di>
-    </section>
+      </section>
 
-    <section id="about-us">
-      <!-- <p>Hello</p> -->
-      <div class="text-content">
-        <h1>About Us</h1>
-        <p>
-          Tizon is based in Delhi, India, is a dynamic team of creative minds
-          specializing in 3D/2D animation, graphic design, and VFX/CGI.
-          Committed to supporting startups and pushing the boundaries of
-          technology, we are driven by passion and innovation. Our vision is to
-          emerge as a leading agency, fostering growth through cutting-edge
-          creativity
-        </p>
-
-        <h1 id="guidence-heading">Guidence from top MNC CEO</h1>
-      </div>
-
-      <div class="scroller">
-        <ul class="img-list scroller__inner">
-          <li>
-            <img src="./images/g1.jpg" alt="" />
-            <p>
-              <span>Sparsh Jain</span>
-
-              <span class="company"
-                ><span class="dash"></span
-                ><span>Founder, Progshee Technologies</span>
-              </span>
-            </p>
-          </li>
-          <li>
-            <img src="./images/g2.jpg" alt="" />
-            <p>
-              <span>Shradha Sharma</span>
-
-              <span class="company"
-                ><span class="dash"></span><span>CEO of YourStory</span></span
-              >
-            </p>
-          </li>
-          <li>
-            <img src="./images/g3.jpg" alt="" />
-            <p>
-              <span>Harsh jain</span>
-
-              <span class="company"
-                ><span class="dash"></span><span>Dream11 CEO</span></span
-              >
-            </p>
-          </li>
-          <li>
-            <img src="./images/g4.jpg" alt="" />
-            <p>
-              <span>Adar Poonawalla</span>
-
-              <span class="company"
-                ><span class="dash"></span
-                ><span>CEO of the Serum Institute of India</span></span
-              >
-            </p>
-          </li>
-          <li>
-            <img src="./images/g5.jpg" alt="" />
-            <p>
-              <span>Nitin Saluja</span>
-
-              <span class="company"
-                ><span class="dash"></span><span>Chaayos</span></span
-              >
-            </p>
-          </li>
-          <li>
-            <img src="./images/g6.jpg" alt="" />
-            <p>
-              <span>Upasana Taku</span
-              ><span><span class="dash"></span><span>Mobikwik</span></span>
-            </p>
-          </li>
-          <li>
-            <img src="./images/g7.jpg" alt="" />
-            <p>
-              <span>Alakh pandey</span>
-
-              <span class="company"
-                ><span class="dash"></span><span>Physics wallah</span></span
-              >
-            </p>
-          </li>
-          <li>
-            <img src="./images/g8.jpg" alt="" />
-            <p>
-              <span>Shrini Vishwanath</span>
-
-              <span class="company"
-                ><span class="dash"></span><span>Founder Upstox</span></span
-              >
-            </p>
-          </li>
-          <li>
-            <img src="./images/g9.jpg" alt="" />
-            <p>
-              <span>Harsimarbir Singh</span>
-
-              <span class="company"
-                ><span class="dash"></span
-                ><span>Founder prystin care</span></span
-              >
-            </p>
-          </li>
-          <li>
-            <img src="./images/g10.jpg" alt="" />
-            <p>
-              <span>Abhiraj Singh bhal</span>
-
-              <span class="company"
-                ><span class="dash"></span
-                ><span>Founder & C.E.O, Urban Company</span></span
-              >
-            </p>
-          </li>
-          <li>
-            <img src="./images/g11.jpg" alt="" />
-            <p>
-              <span>Karan Bajaj</span>
-
-              <span class="company"
-                ><span class="dash"></span
-                ><span>Founder, White Hat Jr</span></span
-              >
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="why-choose-agency">
-      <div class="text-content">
-        <h1>Why Choose Our Agency</h1>
-        <p>
-          Tizonn Designing Services stands out for its commitment to excellence,
-          blending creativity, expertise, and innovation to deliver distinctive
-          and impactful design solutions. Our team of skilled professionals is
-          dedicated to understanding and realizing your vision, ensuring that
-          every project reflects your unique identity and goals. With a focus on
-          quality, creativity, and client satisfaction, Tizonn Designing
-          Services is the ideal choice for those seeking a partner to transform
-          ideas into visually compelling and effective designs.
-        </p>
-      </div>
-
-      <div class="boxes">
-        <div class="box">
-          <img src="./images/Experts-pana.png" alt="" />
-          <h3>Technological Excellence</h3>
-          <p>
-            Unleash bespoke creativity in 3D/2D, graphic design, and
-            VFX/CGI—elevating projects with exceptional craftsmanship
-          </p>
-        </div>
-        <div class="box">
-          <img src="./images/Creative team-pana.png" alt="" />
-          <h3>Unparalleled Creativity</h3>
-          <p>
-            Unleash bespoke creativity in 3D/2D, graphic design, and
-            VFX/CGI—elevating projects with exceptional craftsmanship
-          </p>
-        </div>
-        <div class="box">
-          <img src="./images/Business solution-amico.png" alt="" />
-          <h3>Comprehensive Solutions</h3>
-          <p>
-            Unleash bespoke creativity in 3D/2D, graphic design, and
-            VFX/CGI—elevating projects with exceptional craftsmanship
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact-section">
-      <div id="contact-us">
+      <section id="about-us" tabindex="-1">
         <div class="text-content">
-          <h1>Unleash Your True Potential With Us</h1>
-          <p>Take the First Step Towards Turning Your Vision Into Reality.</p>
+          <h2>About Us</h2>
+          <p>
+            Tizon is based in Delhi, India, is a dynamic team of creative minds
+            specializing in 3D/2D animation, graphic design, and VFX/CGI.
+            Committed to supporting startups and pushing the boundaries of
+            technology, we are driven by passion and innovation. Our vision is to
+            emerge as a leading agency, fostering growth through cutting-edge
+            creativity
+          </p>
+
+          <h3>Guidance from top MNC leaders</h3>
         </div>
-        <button type="button" id="schedule-btn">Schedule a Call</button>
-        <div class="modal" id="myModal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <div
-              id="calendar"
-              class="calendly-inline-widget"
-              data-url="https://calendly.com/tizon-india/client-meeting"
-              style="min-width: 320px; height: 630px"
-            ></div>
+        <div class="scroller" role="region" aria-label="Industry guidance" tabindex="0">
+          <ul class="img-list scroller__inner">
+            <li>
+              <img src="./images/g1.webp" alt="" width="337" height="450" loading="lazy" decoding="async" />
+              <p>
+                <span>Sparsh Jain</span>
+
+                <span class="company"
+                  ><span class="dash"></span
+                  ><span>Founder, Progshee Technologies</span>
+                </span>
+              </p>
+            </li>
+            <li>
+              <img src="./images/g2.webp" alt="" width="414" height="450" loading="lazy" decoding="async" />
+              <p>
+                <span>Shradha Sharma</span>
+
+                <span class="company"
+                  ><span class="dash"></span><span>CEO of YourStory</span></span
+                >
+              </p>
+            </li>
+            <li>
+              <img src="./images/g3.webp" alt="" width="450" height="450" loading="lazy" decoding="async" />
+              <p>
+                <span>Harsh jain</span>
+
+                <span class="company"
+                  ><span class="dash"></span><span>Dream11 CEO</span></span
+                >
+              </p>
+            </li>
+            <li>
+              <img src="./images/g4.webp" alt="" width="450" height="450" loading="lazy" decoding="async" />
+              <p>
+                <span>Adar Poonawalla</span>
+
+                <span class="company"
+                  ><span class="dash"></span
+                  ><span>CEO of the Serum Institute of India</span></span
+                >
+              </p>
+            </li>
+            <li>
+              <img src="./images/g5.webp" alt="" width="253" height="450" loading="lazy" decoding="async" />
+              <p>
+                <span>Nitin Saluja</span>
+
+                <span class="company"
+                  ><span class="dash"></span><span>Chaayos</span></span
+                >
+              </p>
+            </li>
+            <li>
+              <img src="./images/g6.webp" alt="" width="392" height="450" loading="lazy" decoding="async" />
+              <p>
+                <span>Upasana Taku</span
+                ><span><span class="dash"></span><span>Mobikwik</span></span>
+              </p>
+            </li>
+            <li>
+              <img src="./images/g7.webp" alt="" width="450" height="450" loading="lazy" decoding="async" />
+              <p>
+                <span>Alakh pandey</span>
+
+                <span class="company"
+                  ><span class="dash"></span><span>Physics wallah</span></span
+                >
+              </p>
+            </li>
+            <li>
+              <img src="./images/g8.webp" alt="" width="202" height="450" loading="lazy" decoding="async" />
+              <p>
+                <span>Shrini Vishwanath</span>
+
+                <span class="company"
+                  ><span class="dash"></span><span>Founder Upstox</span></span
+                >
+              </p>
+            </li>
+            <li>
+              <img src="./images/g9.webp" alt="" width="253" height="450" loading="lazy" decoding="async" />
+              <p>
+                <span>Harsimarbir Singh</span>
+
+                <span class="company"
+                  ><span class="dash"></span
+                  ><span>Founder prystin care</span></span
+                >
+              </p>
+            </li>
+            <li>
+              <img src="./images/g10.webp" alt="" width="418" height="450" loading="lazy" decoding="async" />
+              <p>
+                <span>Abhiraj Singh bhal</span>
+
+                <span class="company"
+                  ><span class="dash"></span
+                  ><span>Founder & C.E.O, Urban Company</span></span
+                >
+              </p>
+            </li>
+            <li>
+              <img src="./images/g11.webp" alt="" width="337" height="450" loading="lazy" decoding="async" />
+              <p>
+                <span>Karan Bajaj</span>
+
+                <span class="company"
+                  ><span class="dash"></span
+                  ><span>Founder, White Hat Jr</span></span
+                >
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="why-choose-agency" tabindex="-1">
+        <div class="text-content">
+          <h2>Why Choose Our Agency</h2>
+          <p>
+            Tizonn Designing Services stands out for its commitment to excellence,
+            blending creativity, expertise, and innovation to deliver distinctive
+            and impactful design solutions. Our team of skilled professionals is
+            dedicated to understanding and realizing your vision, ensuring that
+            every project reflects your unique identity and goals. With a focus on
+            quality, creativity, and client satisfaction, Tizonn Designing
+            Services is the ideal choice for those seeking a partner to transform
+            ideas into visually compelling and effective designs.
+          </p>
+        </div>
+
+        <div class="boxes">
+          <div class="box">
+            <img src="./images/Experts-pana.webp" alt="" width="500" height="500" loading="lazy" decoding="async" />
+            <h3>Technological Excellence</h3>
+            <p>
+              Unleash bespoke creativity in 3D/2D, graphic design, and
+              VFX/CGI—elevating projects with exceptional craftsmanship
+            </p>
+          </div>
+          <div class="box">
+            <img src="./images/Creative team-pana.webp" alt="" width="500" height="500" loading="lazy" decoding="async" />
+            <h3>Unparalleled Creativity</h3>
+            <p>
+              Unleash bespoke creativity in 3D/2D, graphic design, and
+              VFX/CGI—elevating projects with exceptional craftsmanship
+            </p>
+          </div>
+          <div class="box">
+            <img src="./images/Business solution-amico.webp" alt="" width="500" height="500" loading="lazy" decoding="async" />
+            <h3>Comprehensive Solutions</h3>
+            <p>
+              Unleash bespoke creativity in 3D/2D, graphic design, and
+              VFX/CGI—elevating projects with exceptional craftsmanship
+            </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <footer id="footer">
-        <h2>Tizon</h2>
-
-        <div id="stay-in-touch-section">
-          <h4>Stay In Touch</h4>
-          <div id="social-media-icons">
-            <a href="#"><img src="./images/facebook.svg" alt="" /></a>
-            <a
-              href="https://www.instagram.com/the_tizon?igsh=bXpheDI0djA2bG82"
-              target="_blank"
-              ><img src="./images/instagram.svg" alt=""
-            /></a>
-            <a href="#"><img src="./images/twitter.svg" alt="" /></a>
-            <a
-              href="https://youtube.com/@tizonindia1179?feature=shared"
-              target="_blank"
-              ><img src="./images/youtube.svg" alt=""
-            /></a>
+      <section id="contact-section" tabindex="-1">
+        <div id="contact-us">
+          <div class="text-content">
+            <h2>Unleash Your True Potential With Us</h2>
+            <p>Take the First Step Towards Turning Your Vision Into Reality.</p>
           </div>
+          <a id="schedule-btn" href="mailto:info@tizonn.com?subject=Schedule%20a%20call">
+            Schedule a Call
+          </a>
+          <dialog id="schedule-dialog" aria-labelledby="schedule-title" closedby="any">
+            <header class="schedule-header">
+              <h2 id="schedule-title">Schedule a Call</h2>
+              <form method="dialog">
+                <button type="submit" class="schedule-close" aria-label="Close scheduling" autofocus>&times;</button>
+              </form>
+            </header>
+            <p>Send us a message to arrange a time for your call.</p>
+            <ul class="schedule-options">
+              <li><a href="mailto:info@tizonn.com?subject=Schedule%20a%20call">Email Tizon</a></li>
+              <li>
+                <a href="https://wa.me/918826123751?text=Hello%2C%20I%27d%20like%20to%20schedule%20a%20call%20with%20Tizon."
+                  target="_blank" rel="noopener noreferrer">Message Tizon on WhatsApp</a>
+              </li>
+            </ul>
+          </dialog>
         </div>
+        <footer id="footer">
+          <h2>Tizon</h2>
 
-        <div id="information-section">
-          <div class="info">
-            <img src="./images/location.svg" alt="" />
-            <h6>Delhi , India</h6>
+          <div id="stay-in-touch-section">
+            <h3>Stay In Touch</h3>
+            <div id="social-media-icons">
+              <a
+                href="https://www.instagram.com/the_tizon?igsh=bXpheDI0djA2bG82"
+                target="_blank" rel="noopener noreferrer"
+                ><img src="./images/instagram.svg" alt="Tizon on Instagram"
+              /></a>
+
+              <a
+                href="https://youtube.com/@tizonindia1179?feature=shared"
+                target="_blank" rel="noopener noreferrer"
+                ><img src="./images/youtube.svg" alt="Tizon on YouTube"
+              /></a>
+            </div>
           </div>
-          <div class="info">
-            <img src="./images/email.svg" alt="" />
-            <h6>info@tizonn.com</h6>
+
+          <div id="information-section">
+            <div class="info">
+              <img src="./images/location.svg" alt="" />
+              <span>Delhi, India</span>
+            </div>
+            <div class="info">
+              <img src="./images/email.svg" alt="" />
+              <a href="mailto:info@tizonn.com">info@tizonn.com</a>
+            </div>
+            <div class="info">
+              <img src="./images/phone.svg" alt="" />
+              <a href="tel:+919310203623">+91-9310203623</a>
+            </div>
           </div>
-          <div class="info">
-            <img src="./images/phone.svg" alt="" />
-            <h6>+91-9310203623</h6>
-          </div>
-        </div>
-        <p id="copyright-text">
-          &copy; 2024 Tizon , INC. All rights reserved. Designed by
-          <a href="https://progshee.com/" style="color: #fff" target="_blank"
-            >Progshee Technologies.</a
-          >
-        </p>
-      </footer>
-    </section>
-
-    <!----------- JS scripts -------->
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- <script
-      type="text/javascript"
-      src="https://images.calendly.com/images/external/widget.js"
-    ></script> -->
-
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <script>
-      let sliderLinks = document.querySelectorAll(".links");
-      let swiperSlides = document.querySelectorAll(".swiper-slide");
-      let currentSlideIndex;
-      // console.log(swiperSlides);
-      let swiper = new Swiper(".mySwiper", {
-        // loop: true,
-        centeredSlides: true,
-        // autoplay: {
-        //   delay: 2000,
-        // },
-        breakpoints: {
-          299: {
-            slidesPerView: 1,
-            spaceBetween: 50,
-            direction: "vertical",
-          },
-          300: {
-            slidesPerView: 1,
-            spaceBetween: 50,
-          },
-          361: {
-            slidesPerView: 1,
-            spaceBetween: 50,
-          },
-          481: {
-            slidesPerView: 1,
-            spaceBetween: 50,
-          },
-          770: {
-            slidesPerView: 1,
-            spaceBetween: 50,
-          },
-          992: {
-            slidesPerView: 1,
-            spaceBetween: 50,
-          },
-          1163: {
-            slidesPerView: 2,
-            spaceBetween: 50,
-          },
-          1368: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-          },
-        },
-      });
-
-      sliderLinks.forEach((element, i) => {
-        element.addEventListener("click", () => {
-          swiper.slideTo(i, 200);
-          swiperSlides[i].classList.toggle("transform");
-        });
-      });
-
-      // swiper.slideTo(2, 300);
-    </script>
-    <script src="js/scripts.js"></script>
+          <p id="copyright-text">
+            &copy; 2024 Tizon , INC. All rights reserved.
+          </p>
+        </footer>
+      </section>
+    </main>
   </body>
 </html>

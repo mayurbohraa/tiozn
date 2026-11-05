@@ -1,93 +1,111 @@
-/* ----- Navbar toggle ----- */
-
+const navbar = document.querySelector("#navbar");
 const navbarToggle = navbar.querySelector("#navbar-toggle");
-const navbarMenu = document.querySelector("#navbar-menu");
-const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
+const navbarMenu = navbar.querySelector("#navbar-menu");
+const desktopNavigation = window.matchMedia("(min-width: 1163px)");
 
-let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
-
-const toggleNavbarVisibility = () => {
-  isNavbarExpanded = !isNavbarExpanded;
-  navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
-};
-
-navbarToggle.addEventListener("click", toggleNavbarVisibility);
-
-navbarLinksContainer.addEventListener("click", (e) => {
-  if (isNavbarExpanded) {
-    navbarToggle.setAttribute("aria-expanded", !isNavbarExpanded);
-  }
-  e.stopPropagation()
+navbarToggle.addEventListener("click", () => {
+  const expanded = navbarToggle.getAttribute("aria-expanded") === "true";
+  navbarToggle.setAttribute("aria-expanded", String(!expanded));
 });
-navbarMenu.addEventListener("click", toggleNavbarVisibility);
 
-// Schedule Button Modal 
-let modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-let btn = document.getElementById("schedule-btn");
-
-// Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.addEventListener('click', () => {
-  modal.style.display = "block";
-})
-
-// When the user clicks on <span> (x), close the modal
-span.addEventListener('click', () => {
-  modal.style.display = "none";
-})
-
-// When the user clicks anywhere outside of the modal, close it
-window.addEventListener('click', (event) => {
-  if (event.target == modal) {
-    modal.style.display = "none";
+navbarMenu.addEventListener("click", (event) => {
+  if (event.target.closest("a") || event.target === navbarMenu) {
+    navbarToggle.setAttribute("aria-expanded", "false");
   }
-})
+});
 
-// 
+navbar.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && navbarToggle.getAttribute("aria-expanded") === "true") {
+    navbarToggle.setAttribute("aria-expanded", "false");
+    navbarToggle.focus();
+  }
+});
 
-const scrollers = document.querySelectorAll('.scroller');
-// console.log(scrollers)
+desktopNavigation.addEventListener("change", () => {
+  navbarToggle.setAttribute("aria-expanded", "false");
+});
 
-const addAnimation = () => {
-  scrollers.forEach((scroller) => {
-    // add data-animated="true" to every `.scroller` on the page
-    scroller.setAttribute("data-animated", true);
+navbar.setAttribute("data-menu-ready", "");
 
+const scheduleLink = document.querySelector("#schedule-btn");
+const scheduleDialog = document.querySelector("#schedule-dialog");
 
-    const scrollerInner = scroller.querySelector('.scroller__inner');
-    // console.log(scrollerInner)
-    const scrollerInnerContent = Array.from(scrollerInner.children);
-    // console.log(scrollerInnerContent)
+if (typeof scheduleDialog.showModal === "function") {
+  scheduleLink.setAttribute("aria-haspopup", "dialog");
 
+  scheduleLink.addEventListener("click", (event) => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
 
-    scrollerInnerContent.forEach(item => {
-      const dupilcatedItem = item.cloneNode(true)
-      // console.log(dupilcatedItem);
-
-      dupilcatedItem.setAttribute('aria-hidden', true)
-
-      scrollerInner.appendChild(dupilcatedItem)
-    })
-  })
+    event.preventDefault();
+    scheduleDialog.showModal();
+  });
 }
 
-addAnimation()
+const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+const scroller = document.querySelector(".scroller");
+const scrollerTrack = scroller.querySelector(".scroller__inner");
+const guidanceCards = [...scrollerTrack.children];
+let guidanceCopies = [];
 
-const sliderSpan = document.querySelector('#slider-span');
-const links = document.querySelectorAll('.links');
+function updateGuidanceCarousel() {
+  guidanceCopies.forEach((copy) => copy.remove());
+  guidanceCopies = [];
+  const animate = !motionPreference.matches;
+  scroller.toggleAttribute("data-animated", animate);
 
-const indicator = (e) => {
-  sliderSpan.style.left = e.offsetLeft + 'px';
-  sliderSpan.style.width = e.offsetWidth + 'px';
+  if (animate) {
+    scroller.scrollLeft = 0;
+    guidanceCopies = guidanceCards.map((card) => {
+      const copy = card.cloneNode(true);
+      copy.setAttribute("aria-hidden", "true");
+      return copy;
+    });
+    scrollerTrack.append(...guidanceCopies);
+  }
 }
 
-links.forEach((element, index) => {
-  element.addEventListener('mouseover', (e) => {
+motionPreference.addEventListener("change", updateGuidanceCarousel);
+updateGuidanceCarousel();
 
-    indicator(e.target);
-  })
-})
+const portfolio = document.querySelector(".portfolio-carousel");
+const portfolioCards = [...portfolio.querySelectorAll(".portfolio-card")];
+const portfolioTabs = [...document.querySelectorAll(".portfolio-nav a")];
+
+function selectPortfolio(index) {
+  const card = portfolioCards[index];
+  const left = card.offsetLeft - portfolioCards[0].offsetLeft;
+  portfolio.scrollTo({
+    left,
+    behavior: motionPreference.matches ? "instant" : "smooth",
+  });
+}
+
+portfolioTabs.forEach((tab, index) => {
+  tab.addEventListener("click", (event) => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    selectPortfolio(index);
+  });
+});
+
+function updatePortfolioSelection() {
+  const index = portfolioCards.reduce((nearest, card, current) => {
+    const distance = Math.abs(card.offsetLeft - portfolioCards[0].offsetLeft - portfolio.scrollLeft);
+    const nearestDistance = Math.abs(portfolioCards[nearest].offsetLeft - portfolioCards[0].offsetLeft - portfolio.scrollLeft);
+    return distance < nearestDistance ? current : nearest;
+  }, 0);
+  portfolioTabs.forEach((tab, current) => {
+    if (current === index) tab.setAttribute("aria-current", "true");
+    else tab.removeAttribute("aria-current");
+  });
+}
+
+portfolio.addEventListener("scroll", updatePortfolioSelection, { passive: true });
+portfolio.addEventListener("keydown", (event) => {
+  if (event.target !== portfolio || !["ArrowLeft", "ArrowRight"].includes(event.key)) return;
+  event.preventDefault();
+  const index = portfolioTabs.findIndex((tab) => tab.getAttribute("aria-current") === "true");
+  const direction = event.key === "ArrowRight" ? 1 : -1;
+  selectPortfolio((index + direction + portfolioCards.length) % portfolioCards.length);
+});
+updatePortfolioSelection();

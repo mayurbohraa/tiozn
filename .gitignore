@@ -1,0 +1,10 @@
+# Local files and generated outputs
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+*.log
+__pycache__/
+node_modules/
+dist/

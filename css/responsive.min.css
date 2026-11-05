@@ -1,10 +1,7 @@
-@media screen and (max-width: 299px) {
-  html {
-    overflow-x: hidden;
-  }
+@media screen and (width < 300px) {
   .text-content {
     width: 80%;
-    h1 {
+    h2 {
       font-size: 18px;
     }
     p {
@@ -13,44 +10,12 @@
     }
   }
 
-  .home-link .logo {
-    display: none;
-  }
-  /* Logo Section */
-
-  #logo-section {
-    align-items: center;
-    justify-content: center;
-  }
-
-  #logos {
-    height: 100%;
-    margin-top: 15rem;
-    gap: 2rem;
-  }
-
-  .logo {
-    width: auto;
-    height: 25px;
-  }
-
-  #logo-text {
-    width: 85%;
-    height: 92px;
-  }
-
-  #logo-text p {
-    text-align: center;
-    font-size: 17px;
-    line-height: 25px;
-  }
-
   /* Product Section */
 
   #products-section {
     .text-content {
       align-items: baseline;
-      margin-top: 10rem;
+      margin-top: 3rem;
     }
 
     .boxes {
@@ -60,63 +25,10 @@
 
     .boxes .box {
       width: 200px;
-      height: 270px;
+      min-height: 270px;
       img {
         width: 100px;
         height: auto;
-      }
-    }
-  }
-
-  /* Portfolio Section */
-
-  #portfolio-section {
-    width: 100%;
-    .text-content {
-      margin-top: 10rem;
-    }
-
-    #portfolio-nav {
-      align-items: center;
-      width: 99.64%;
-      border-radius: 0;
-      #slider-nav {
-        gap: 1rem;
-        li {
-          padding-right: 0;
-          padding-left: 0;
-          font-size: 4px;
-
-          .links {
-            padding: 0;
-          }
-        }
-      }
-    }
-
-    .swiper-wrapper {
-      .swiper-slide {
-        flex-direction: column;
-        width: 200px;
-        height: auto;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        padding-bottom: 1rem;
-        transform: scale(0.7);
-
-        img {
-          width: 100%;
-          border-radius: 10px 10px 0 0;
-        }
-
-        .details {
-          align-items: center;
-          gap: 1rem;
-          p {
-            text-align: center;
-          }
-        }
       }
     }
   }
@@ -132,7 +44,7 @@
       flex-direction: column;
       .box {
         width: 200px;
-        height: 270px;
+        min-height: 270px;
         img {
           width: 100px;
           height: auto;
@@ -141,34 +53,12 @@
     }
   }
 
-  #contact-section {
-    text-align: center;
-    background: #120d1c;
-    #contact-us {
-      .text-content {
-        p,
-        h1 {
-          text-align: center;
-        }
-      }
-    }
-
-    #social-media-icons {
-      display: flex;
-      gap: 15px;
-    }
-
-    #information-section {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  }
 }
 
 @media (min-width: 300px) and (max-width: 360px) {
   .text-content {
     width: 80%;
-    h1 {
+    h2 {
       font-size: 18px;
     }
     p {
@@ -177,44 +67,12 @@
     }
   }
 
-  .home-link .logo {
-    display: none;
-  }
-  /* Logo Section */
-
-  #logo-section {
-    align-items: center;
-    justify-content: center;
-  }
-
-  #logos {
-    height: 100%;
-    margin-top: 15rem;
-    gap: 2rem;
-  }
-
-  .logo {
-    width: auto;
-    height: 40px;
-  }
-
-  #logo-text {
-    width: 85%;
-    height: 92px;
-  }
-
-  #logo-text p {
-    text-align: center;
-    font-size: 17px;
-    line-height: 25px;
-  }
-
   /* Product Section */
 
   #products-section {
     .text-content {
       align-items: baseline;
-      margin-top: 10rem;
+      margin-top: 3rem;
     }
 
     .boxes {
@@ -231,64 +89,11 @@
     }
   }
 
-  /* Portfolio Section */
-
-  #portfolio-section {
-    width: 100%;
-    .text-content {
-      margin-top: 10rem;
-    }
-
-    #portfolio-nav {
-      align-items: center;
-      width: 99.64%;
-      border-radius: 0;
-      #slider-nav {
-        gap: 1rem;
-        li {
-          padding-right: 0;
-          padding-left: 0;
-          font-size: 6px;
-
-          .links {
-            padding: 0;
-          }
-        }
-      }
-    }
-
-    .swiper-wrapper {
-      .swiper-slide {
-        flex-direction: column;
-        width: 200px;
-        height: auto;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        padding-bottom: 1rem;
-        transform: scale(0.7);
-
-        img {
-          width: 100%;
-          border-radius: 10px 10px 0 0;
-        }
-
-        .details {
-          align-items: center;
-          gap: 1rem;
-          p {
-            text-align: center;
-          }
-        }
-      }
-    }
-  }
-
   /* About Us Section */
 
   #about-us {
     .text-content {
-      margin-top: 10rem;
+      margin-top: 3rem;
     }
   }
 
@@ -309,72 +114,23 @@
     }
   }
 
-  #contact-section {
-    text-align: center;
-    background: #120d1c;
-    #contact-us {
-      .text-content {
-        p,
-        h1 {
-          text-align: center;
-        }
-      }
-    }
-
-    #social-media-icons {
-      gap: 1rem;
-    }
-
-    #information-section {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  }
 }
 
-@media (min-width: 361px) and (max-width: 480px) {
+@media (width > 360px) and (max-width: 480px) {
   .text-content {
-    h1 {
+    h2 {
       font-size: 25px;
     }
     p {
       width: 100%;
     }
   }
-  /* Logo Section */
-
-  #logo-section {
-    align-items: center;
-    justify-content: center;
-  }
-
-  #logos {
-    height: 100%;
-    margin-top: 15rem;
-    gap: 3rem;
-  }
-
-  .logo {
-    width: auto;
-    height: 40px;
-  }
-
-  #logo-text {
-    width: 85%;
-    /* height: 50px; */
-  }
-
-  #logo-text p {
-    text-align: center;
-    font-size: 15px;
-  }
-
   /* Product Section */
 
   #products-section {
     .text-content {
       align-items: baseline;
-      margin-top: 10rem;
+      margin-top: 3rem;
     }
 
     .boxes {
@@ -383,59 +139,9 @@
     }
 
     .boxes .box {
-      /* width: 50vw; */
+      /* width: min(100%, 300px); */
       img {
         width: 200px;
-      }
-    }
-  }
-
-  /* Portfolio Section */
-
-  #portfolio-section {
-    .text-content {
-      margin-top: 10rem;
-    }
-    #portfolio-nav {
-      align-items: center;
-      width: 99.64%;
-      border-radius: 0;
-      #slider-nav {
-        align-items: center;
-        gap: 1rem;
-        li {
-          padding-right: 0;
-          padding-left: 0;
-          font-size: 8px;
-
-          .links {
-            padding: 0;
-          }
-        }
-      }
-    }
-    .swiper-wrapper {
-      .swiper-slide {
-        flex-direction: column;
-        width: 200px;
-        height: auto;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        padding-bottom: 1rem;
-        transform: scale(0.9);
-        img {
-          width: 100%;
-          border-radius: 10px 10px 0 0;
-        }
-
-        .details {
-          align-items: center;
-          gap: 1rem;
-          p {
-            text-align: center;
-          }
-        }
       }
     }
   }
@@ -444,7 +150,7 @@
 
   #about-us {
     .text-content {
-      margin-top: 10rem;
+      margin-top: 3rem;
     }
   }
 
@@ -463,87 +169,23 @@
     }
   }
 
-  #contact-section {
-    text-align: center;
-    background: #120d1c;
-    #contact-us {
-      .text-content {
-        p,
-        h1 {
-          text-align: center;
-        }
-      }
-    }
-
-    #stay-in-touch-section {
-      padding: 10px;
-      gap: 5px;
-
-      #social-media-icons {
-        width: fit-content;
-        display: flex;
-        /* gap: 2rem; */
-
-        a img {
-          width: auto;
-          height: auto;
-        }
-      }
-    }
-
-    #social-media-icons {
-      gap: 2rem;
-    }
-
-    #information-section {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  }
 }
 
-@media (min-width: 481px) and (max-width: 769px) {
+@media (width > 480px) and (max-width: 769px) {
   .text-content {
-    h1 {
+    h2 {
       font-size: 25px;
     }
     p {
       width: 100%;
     }
   }
-  /* Logo Section */
-
-  #logo-section {
-    align-items: center;
-    justify-content: center;
-  }
-
-  #logos {
-    height: 100%;
-    margin-top: 15rem;
-  }
-
-  .logo {
-    width: auto;
-    height: 50px;
-  }
-
-  #logo-text {
-    width: 85%;
-    height: 50px;
-  }
-
-  #logo-text p {
-    text-align: center;
-    font-size: 15px;
-  }
-
   /* Product Section */
 
   #products-section {
     .text-content {
       align-items: baseline;
-      margin-top: 10rem;
+      margin-top: 3rem;
     }
 
     .boxes {
@@ -552,7 +194,7 @@
     }
 
     .boxes .box {
-      width: 50vw;
+      width: min(100%, 300px);
       height: fit-content;
       img {
         width: 200px;
@@ -560,43 +202,11 @@
     }
   }
 
-  /* Portfolio Section */
-
-  #portfolio-section {
-    .text-content {
-      margin-top: 10rem;
-    }
-
-    #portfolio-nav {
-      align-items: center;
-      width: 99.64%;
-      border-radius: 0;
-      #slider-nav {
-        width: 100%;
-        align-items: center;
-        gap: 1rem;
-        li {
-          padding-right: 0;
-          padding-left: 0;
-          font-size: 14px;
-
-          .links {
-            padding: 0;
-          }
-        }
-      }
-    }
-
-    .swiper-slide {
-      transform: scale(0.9);
-    }
-  }
-
   /* About Us Section */
 
   #about-us {
     .text-content {
-      margin-top: 10rem;
+      margin-top: 3rem;
     }
   }
 
@@ -608,7 +218,7 @@
     .boxes {
       flex-direction: column;
       .box {
-        width: 50vw;
+        width: min(100%, 300px);
         height: fit-content;
         img {
           width: 200px;
@@ -617,72 +227,21 @@
     }
   }
 
-  #contact-section {
-    text-align: center;
-    background: #120d1c;
-    #contact-us {
-      .text-content {
-        p,
-        h1 {
-          text-align: center;
-        }
-      }
-    }
-  }
-
-  #social-media-icons {
-    gap: 2rem;
-  }
-
-  #contact-section {
-    #information-section {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-  }
 }
 
-@media (min-width: 770px) and (max-width: 991px) {
+@media (width > 769px) and (max-width: 991px) {
   .text-content {
     p {
       width: 100%;
     }
   }
-  /* Logo Section */
-
-  #logo-section {
-    align-items: center;
-    justify-content: center;
-  }
-
-  #logos {
-    height: 100%;
-    margin-top: 15rem;
-  }
-
-  .logo {
-    width: auto;
-    height: 100px;
-  }
-
-  #logo-text {
-    width: 85%;
-    height: 50px;
-  }
-
-  #logo-text p {
-    text-align: center;
-    font-size: 22px;
-  }
-
   /* Product Section */
 
   #products-section {
     .text-content {
       padding-left: 1rem;
       align-items: baseline;
-      margin-top: 10rem;
+      margin-top: 3rem;
     }
 
     .boxes {
@@ -691,27 +250,9 @@
     }
 
     .boxes .box {
-      width: 50vw;
+      width: min(100%, 300px);
       img {
         width: 250px;
-      }
-    }
-  }
-
-  /* Portfolio Section */
-
-  #portfolio-section {
-    .text-content {
-      margin-top: 10rem;
-    }
-
-    #slider-nav {
-      font-size: 15px;
-    }
-    .swiper-slide {
-      transform: scale(0.9);
-      img {
-        width: 431px;
       }
     }
   }
@@ -720,19 +261,19 @@
 
   #about-us {
     .text-content {
-      margin-top: 10rem;
+      margin-top: 3rem;
     }
   }
 
   #why-choose-agency {
     .text-content {
-      margin-top: 10rem;
+      margin-top: 3rem;
     }
 
     .boxes {
       flex-direction: column;
       .box {
-        width: 50vw;
+        width: min(100%, 300px);
         img {
           width: 250px;
         }
@@ -740,51 +281,17 @@
     }
   }
 
-  #contact-section {
-    text-align: center;
-    background: #120d1c;
-    #contact-us {
-      .text-content {
-        padding-top: 5rem;
-        p,
-        h1 {
-          text-align: center;
-        }
-      }
-    }
-
-    #social-media-icons {
-      gap: 2rem;
-    }
-
-    #information-section {
-      gap: 1rem;
-    }
-  }
 }
 
-@media (min-width: 992px) and (max-width: 1162px) {
+@media (width > 991px) and (width < 1163px) {
   #products-section {
     width: 100%;
     .boxes {
       gap: 3rem;
 
       .box {
-        height: 20rem;
+        min-height: 20rem;
         width: 300px;
-      }
-    }
-  }
-
-  #portfolio-section {
-    #slider-nav {
-      gap: 1rem;
-    }
-
-    .swiper-slide {
-      transform: scale(0.9);
-      img {
-        width: fit-content;
       }
     }
   }
@@ -797,17 +304,6 @@
     }
   }
 
-  #footer {
-    position: relative;
-    top: 2rem;
-  }
-  #social-media-icons {
-    gap: 2rem;
-  }
-
-  #information-section {
-    gap: 2rem;
-  }
 }
 
 @media screen and (min-width: 1163px) {
@@ -817,15 +313,9 @@
       gap: 3rem;
 
       .box {
-        height: 20rem;
+        min-height: 20rem;
         width: 300px;
       }
-    }
-  }
-
-  #portfolio-section {
-    #slider-nav {
-      gap: 1rem;
     }
   }
 
@@ -842,16 +332,26 @@
     }
   }
 
-  #footer {
-    position: relative;
-    top: 2rem;
+}
+
+
+@media (min-width: 1163px) {
+  main > section {
+    padding-block: var(--header-offset) 2rem;
   }
 
-  #social-media-icons {
-    gap: 2rem;
+  #products-section .text-content,
+  #about-us .text-content,
+  #why-choose-agency .text-content {
+    margin-top: 0;
   }
 
-  #information-section {
+  #contact-section {
+    padding-bottom: 0;
     gap: 2rem;
+
+    #footer {
+      margin-top: auto;
+    }
   }
 }
