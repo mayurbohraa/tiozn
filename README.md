@@ -6,7 +6,7 @@ Tizon is a single-page website presenting animation, graphic design, and video-e
 
 ## Project Preview
 
-<img src="images/project-preview.webp" alt="Tizon website, visual identity, responsive layouts, and portfolio presentation" width="520" />
+<img src="images/project-preview.webp" alt="Tizon website, visual identity, responsive layouts, and portfolio presentation" width="100%" />
 
 ## Key Features
 
@@ -17,9 +17,9 @@ Tizon is a single-page website presenting animation, graphic design, and video-e
 - Responsive service cards, SVG branding, and optimized WebP images.
 - Call-request dialog with email and WhatsApp links, plus footer contact and social links.
 
-## Live Website
+## Live Website & Related Repository
 
-[https://tiozn.vercel.app/](https://tiozn.vercel.app/)
+https://tiozn.vercel.app/
 
 
 ## Tech Stack
@@ -54,7 +54,7 @@ To use a local server on Windows, open a terminal in the repository folder, alon
 py -3 -m http.server 8080 --bind 127.0.0.1
 ```
 
-Visit [http://127.0.0.1:8080/](http://127.0.0.1:8080/) in your browser. Stop the server with Ctrl+C.
+Visit http://127.0.0.1:8080/ in your browser. Stop the server with Ctrl+C.
 
 Publish the repository root as a static directory. The checked-in files are the deployable output.
 
